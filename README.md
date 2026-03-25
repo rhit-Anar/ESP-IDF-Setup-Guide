@@ -1,8 +1,7 @@
-# ESP-IDF-Setup-Guide
-This documentation will help how to set ESP-IDF on you computer without requiring any pre knowledge. Easy set up 
-## Make sure you have these downloaded on you computer:
+# ESP-IDF Setup Guide
+This documentation will help how to set ESP-IDF on you computer without requiring any pre knowledge. An easy step-by-step steup.
+## Make sure you have these downloaded on your computer:
 -Python 3.11. Link: https://www.python.org/ftp/python/3.11.7/python-3.11.7-amd64.exe 
-
 -Install VS code: usually it is downloaded. 
 ## Downloading ESP_IDF:
 1. Download EDP-IDF Tools 5.4.3 version because EDP-IDF doesn’t support version below that. Click on the link: [ Download ESP-IDF 5.4.3 make sure to click the correct version ](https://dl.espressif.com/dl/esp-idf/?idf=4.4)
@@ -38,10 +37,36 @@ This documentation will help how to set ESP-IDF on you computer without requirin
     ```
     idf.py build
     ```
-16.  Instead of x put the COM number.
+16.  Instead of x put the COM number:
     ```
     idf.py -p COMx flash monitor
     ```
+
+>[!TIP]
+>if you have a trouble with running the commands, go to Powershell, run:
+   ```
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process 
+   ```
+   Then go to path:
+   ```
+   cd C:\Espressif\frameworks\esp-idf-v5.4.3 
+   ```
+   Then follow the following commands:
+   ```
+   & .\export.ps1 
+   ```
+   ```
+   cd C:\exampleIDF\newesp32p4 
+   ```
+   ```
+   idf.py build
+   ```
+   ```
+   idf.py -p COMx flash
+   ```
+   ```
+   idf.py monitor 
+   ```
 
 
    
