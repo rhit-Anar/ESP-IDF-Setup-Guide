@@ -1,8 +1,25 @@
 # ESP-IDF Setup Guide
 This documentation will help how to set ESP-IDF on you computer without requiring any pre knowledge. An easy step-by-step steup.
 ## Make sure you have these downloaded on your computer:
--Python 3.11. Link: https://www.python.org/ftp/python/3.11.7/python-3.11.7-amd64.exe 
--Install VS code: usually it is downloaded. 
+- [ ] To check if you have downloaded Python 3.11, Open **PowerShell** on your PC.Run the command:
+   ```
+   python --version
+   ```
+   - [ ] If not, Download Python 3.11. Link: [Download Python Click Here!](https://www.python.org/ftp/python/3.11.7/python-3.11.7-amd64.exe). (It is usually downloaded in Download folder.)
+   - [ ] When Downloading make sure click on **Add Python to environment variables**.
+   - [ ] If you have forgot to add it to the PATH, click on the the downloaded link again, and select **Modify**, then hit **Next** for Optional feature and on advanced option, click **Add Python to environment variables**. Then click **Install**
+   - [ ] Then close the power shell and open new powershell again and run the command again.
+      ```
+      python --version
+      ```
+   - [ ] As a result You will see something like this.
+         <p align="left">
+            <img width="348" height="50" alt="image" src="https://github.com/user-attachments/assets/e8e3ff71-f0ac-4ffb-8fde-aeca5f4df4eb" />
+         </p>
+
+         
+         
+- [ ] Install VS code: usually it is downloaded. 
 ## Downloading ESP_IDF:
 1. Download EDP-IDF Tools 5.4.3 version because EDP-IDF doesn’t support version below that. Click on the link: [ Download ESP-IDF 5.4.3 make sure to click the correct version ](https://dl.espressif.com/dl/esp-idf/?idf=4.4)
 2. Make sure to download the folder you desire. For this case, I downloaded it in C drive.
