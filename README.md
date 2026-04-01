@@ -16,16 +16,14 @@ This documentation will help how to set ESP-IDF on you computer without requirin
          <p align="left">
             <img width="348" height="50" alt="image" src="https://github.com/user-attachments/assets/e8e3ff71-f0ac-4ffb-8fde-aeca5f4df4eb" />
          </p>
-
-         
-         
 - [ ] Install VS code: usually it is downloaded. 
 ## Downloading ESP_IDF:
-1. Download EDP-IDF Tools 5.4.3 version because EDP-IDF doesn’t support version below that. Click on the link: [ Download ESP-IDF 5.4.3 make sure to click the correct version ](https://dl.espressif.com/dl/esp-idf/?idf=4.4)
-2. Make sure to download the folder you desire. For this case, I downloaded it in C drive.
-3. After downloading you would see path like: C:\Espressif\frameworks\esp-idf-v5.4.3
-4. I recommend doing everything in Windows PowerShell because it is easier than doing it in the ESP-IDF terminal.
-5. Make sure you have export.ps1 in your path such as: C:\Espressif\frameworks\esp-idf-v5.4.3 => export.ps1.  
+1. Download EDP-IDF Tools 5.4.3 version (Depend which ESP32 board or another board ypu are working with, It is recommended to check which version of IDF yourd supports. This version works for ESP32P4 NANO).
+   Click on the link: [ Download ESP-IDF 5.4.3 make sure to click the correct version ](https://dl.espressif.com/dl/esp-idf/?idf=4.4)
+3. Make sure to download the folder you desire. For this case, I downloaded it in C drive.
+4. After downloading you would see path like: C:\Espressif\frameworks\esp-idf-v5.4.3
+5. I recommend doing everything in Windows PowerShell because it is easier than doing it in the ESP-IDF terminal.
+6. Make sure you have export.ps1 in your path such as: C:\Espressif\frameworks\esp-idf-v5.4.3 => export.ps1.  
 ## PowerShell:
 1. Open PowerShell on you computer.
 2. Navigate to
