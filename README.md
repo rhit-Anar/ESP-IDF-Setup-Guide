@@ -39,9 +39,9 @@ This documentation will help how to set ESP-IDF on you computer without requirin
    idf.py set-target esp32p4
    ```
 
-5.
+5. Replace x for Port number. 
    ```
-
+   idf.py -p COMx flash monitor
    ```
 ## PowerShell:
 1. Open PowerShell on you computer.
