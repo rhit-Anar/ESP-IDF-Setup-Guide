@@ -23,7 +23,26 @@ This documentation will help how to set ESP-IDF on you computer without requirin
 3. Make sure to download the folder you desire. For this case, I downloaded it in C drive.
 4. After downloading you would see path like: C:\Espressif\frameworks\esp-idf-v5.4.3
 5. I recommend doing everything in Windows PowerShell because it is easier than doing it in the ESP-IDF terminal.
-6. Make sure you have export.ps1 in your path such as: C:\Espressif\frameworks\esp-idf-v5.4.3 => export.ps1.  
+6. Make sure you have export.ps1 in your path such as: C:\Espressif\frameworks\esp-idf-v5.4.3 => export.ps1.
+## ESP-IDF Terminal:
+1. After finished downloading the ESP-IDF terminal will be pop out.
+2. To delete the build folder:
+   ```
+   rmdir /s /q build
+   ```
+3. Deletes the old configuration
+   ```
+   del sdkconfig
+   ```
+4. set the target descired board.
+   ```
+   idf.py set-target esp32p4
+   ```
+
+5.
+   ```
+
+   ```
 ## PowerShell:
 1. Open PowerShell on you computer.
 2. Navigate to
