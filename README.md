@@ -68,5 +68,9 @@ This documentation will help how to set ESP-IDF on you computer without requirin
    idf.py monitor 
    ```
 
+## Other issues:
+Python Virtual Environment: python.exe make sue in esp-idf.
+
+
 
    
