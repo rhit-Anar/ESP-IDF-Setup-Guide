@@ -70,6 +70,7 @@ This documentation will help how to set ESP-IDF on you computer without requirin
 
 ## Other issues:
 Python Virtual Environment: python.exe make sue in esp-idf.
+$env:IDF_PATH  --> to check if idf path is correct directiny pinting to
 
 
 
