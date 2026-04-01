@@ -26,23 +26,37 @@ This documentation will help how to set ESP-IDF on you computer without requirin
 6. Make sure you have export.ps1 in your path such as: C:\Espressif\frameworks\esp-idf-v5.4.3 => export.ps1.
 ## ESP-IDF Terminal:
 1. After finished downloading the ESP-IDF terminal will be pop out.
-2. To delete the build folder:
+2. Then go to the project folder you want to run. 
+3. To delete the build folder:
    ```
    rmdir /s /q build
    ```
-3. Deletes the old configuration
+4. Deletes the old configuration
    ```
    del sdkconfig
    ```
-4. set the target descired board.
+6. set the target descired board. For this exampl, we use esp32p4.
    ```
    idf.py set-target esp32p4
    ```
-
-5. Replace x for Port number. 
+7. Replace x for Port number. Go to **device Manager** -> **Port**
    ```
    idf.py -p COMx flash monitor
    ```
+8. To exit the terminal click --> **Ctrl[+]**
+>[! ERROR]
+>If you are having ny issue with sdkconfig file does not exists or incorrect version error run below commands
+   After running the command below, Click S for save and Q for quit. 
+    ```
+   idf.py menuconfig
+   ```
+   To manually configure the ver, open the config file in the NOTE, then **Ctrl+F**, search for **CONFIG_ESP_REV_MIN_FULL**. in our case we set 1 to 100. 
+   ```
+   notepad sdkconfig
+   ```
+   
+   
+      
 ## PowerShell:
 1. Open PowerShell on you computer.
 2. Navigate to
@@ -53,7 +67,7 @@ This documentation will help how to set ESP-IDF on you computer without requirin
    ```
    & .\export.ps1
    ```
-6. To make sure you have v5.4.3 run:
+6. To make sure you have v5.4.3 run: if it says 1.0... something it is okay.
    ```
    idf.py --version
    ```
