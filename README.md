@@ -122,7 +122,7 @@ $env:IDF_PATH  --> to check if idf path is correct directiny pinting to
 
 # ESP-IDF Bluetooth setup instruction
 Assumed: you have an working file of codes that u want to run on your machine. :)
-
+## What to chnage in your given code:
 In your code: Look for idf_Something.yml file in your main folder. (usually same folder as the main.c).
 Then you will see it is starts with dependencies: ....
 Look for a line: 
@@ -130,16 +130,71 @@ Look for a line:
    nimble_peripheral_utils:
    path: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
    ```
-Then go to your Folder and look for where is your nimble_peripheral_utils file is located in your folder. 
-I have copied the path below with different veersion of ESP_IDF:
-Version of ESP_IDF: **esp-idf-v5.5.1-2**
+Then go to your Folder and look for where is your nimble_peripheral_utils file is located in your folder. And copy that. But here
+I have copied the path below with different veersion of ESP_IDFs and you cn just copy and paste.
+**Remember to chnage the C:\ if you didn't downloaded in your C drive. Easy way is just directly copy the path from your folder**.
+
+Version of ESP_IDF: **esp-idf-v5.5.1-2**.
 ```
 C:\Espressif\frameworks\esp-idf-v5.5.1-2\examples\bluetooth\nimble\common\nimble_peripheral_utils
 ```
-Version of ESP_IDF: **esp-idf-v5.4.3**
+Version of ESP_IDF: **esp-idf-v5.4.3**.
 ```
 C:\Espressif\frameworks\esp-idf-v5.4.3\examples\bluetooth\nimble\common\nimble_peripheral_utils
 ```
+## What to Run in Power Shell Teminal: (Assumed ESP_IDF is in C drive!!!, change if your location is different.)
+Please go to your esp_IDF folder:
+```
+cd  C:\Espressif\frameworks
+```
+Since we may have different version run the next code to go to your versuion of IDF:
+```
+ls
+```
+Once you have done, You may see different versions, (I recommend have only one version, or else something it confuses the path.)
+<p align="left">
+<img width="678" height="216" alt="image" src="https://github.com/user-attachments/assets/74f1fd6d-c27c-4882-8044-ecf638eeb5a8" />
+</p>
+Then go to that folder, change the version number below with what you have. Easy trick, if you type **e** then click **Tab** it completes auto for you. 
+
+```
+cd esp-idf-v5.5.1-2
+```
+After you are in the correct esp_idf folder run below command in Power Shell Teminal. (I recommend us it from the search app not from VS code.)
+
+Run code below, because the terminal is being over protective and this below line give you one time access to run the code. 
+```
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+```
+Then run the code below. Sometimes the the version is different like, ..\export... or something . If that is is the case google. 
+```
+.\export.ps1
+```
+Then now go back to your Main code file folder.
+
+## How to run your code
+Please go to your main code file folder in power shell.Replace the the whole C:\Users\X with your path to the code. 
+
+```
+cd C:\Users\X
+```
+
+To build:
+```
+idf.py build
+```
+To flash and show the monitor:
+```
+idf.py -p COMx flash monitor
+```
+Now you should see in the terminal what should be printed in your code. 
+>[!TIP]
+>If u see any Nimble related error, make sure your path is correct because I had the same error, and it was indeed the wrong path for me. Eventhough it it says you should configure the bluetooth manually, I reccommend just please the path!
+
+
+
+
+
 
 
 
