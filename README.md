@@ -44,10 +44,10 @@ This documentation will help how to set ESP-IDF on you computer without requirin
    idf.py -p COMx flash monitor
    ```
 8. To exit the terminal click --> **Ctrl[+]**
->[! ERROR]
+>[!TIP]
 >If you are having ny issue with sdkconfig file does not exists or incorrect version error run below commands
    After running the command below, Click S for save and Q for quit. 
-    ```
+   ```
    idf.py menuconfig
    ```
    To manually configure the ver, open the config file in the NOTE, then **Ctrl+F**, search for **CONFIG_ESP_REV_MIN_FULL**. in our case we set 1 to 100. 
