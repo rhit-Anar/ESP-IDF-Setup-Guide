@@ -120,6 +120,27 @@ This documentation will help how to set ESP-IDF on you computer without requirin
 Python Virtual Environment: python.exe make sue in esp-idf.
 $env:IDF_PATH  --> to check if idf path is correct directiny pinting to
 
+# ESP-IDF Bluetooth setup instruction
+Assumed: you have an working file of codes that u want to run on your machine. :)
+
+In your code: Look for idf_Something.yml file in your main folder. (usually same folder as the main.c).
+Then you will see it is starts with dependencies: ....
+Look for a line: 
+   ```
+   nimble_peripheral_utils:
+   path: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   ```
+Then go to your Folder and look for where is your nimble_peripheral_utils file is located in your folder. 
+I have copied the path below with different veersion of ESP_IDF:
+Version of ESP_IDF: **esp-idf-v5.5.1-2**
+```
+C:\Espressif\frameworks\esp-idf-v5.5.1-2\examples\bluetooth\nimble\common\nimble_peripheral_utils
+```
+Version of ESP_IDF: **esp-idf-v5.4.3**
+```
+C:\Espressif\frameworks\esp-idf-v5.4.3\examples\bluetooth\nimble\common\nimble_peripheral_utils
+```
+
 
 
    
