@@ -2,6 +2,7 @@
 This documentation will help how to set ESP-IDF on you computer without requiring any pre knowledge. An easy step-by-step steup.
 **Useful notation used for this document:**
    - (*)--> means recommended
+   - (**When you open a new terminal**) -- mean you have to do everytime you open a terminal.
 ## Small Note before everything: 
 There are **two ways** to download the ESP-IDF platform where you will be able to simply build and flash you code.
    1. **Manual way**- Using PowerShell (Command Terminal) (*) 
@@ -63,6 +64,8 @@ There are **two ways** to download the ESP-IDF platform where you will be able t
       ```
       & .\export.ps1
       ```
+> [!NOTE]
+> AT THIS POINT YOU HAVE CONNECETED TO idf TOOL AND READY TO COMPILE YOUR CODE. NEXT NAVIGATE TO YOUR 
    7. To make sure you have v5.4.3 run: if it says 1.0... something it is okay.
       ```
       idf.py --version
