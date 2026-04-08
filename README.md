@@ -1,5 +1,22 @@
 # ESP-IDF Setup Guide
 This documentation will help how to set ESP-IDF on you computer without requiring any pre knowledge. An easy step-by-step steup.
+Useful notation used for this document:
+(*)--> recommended
+## Small Note before everything: 
+There are **two ways** to download the ESP-IDF platform where you will be able to simply build and flash you code.
+   1. **Manual way**- The Command Line (*)
+      This is when you download the IDF, compilers and python in to a folder it controls, which in our case we are downloading a folder espressif. 
+         - [x] Have the total control over what is happenning in every file.
+         - [x] Can see every error message directly, so easy to debug and when you have envirement issue.
+         - [x] Used with Git or other custom build script.
+         - [ ] **BUT** you have manually run . .\export.ps1 in every new terminal to wake up the idf tools. 
+      
+   3. **Authomatic way**- The VS Code Extention
+      - [x] Auto easy set up the menuconfig inside the editor.
+      - [x] Uses simple buttons in VS code to flash and build scripts. (it handles export.ps1 automatically.)
+      - [ ] **BUT** for debugging path errors like python and idf_tool_path error it is hard to fix beasue they are set in JSON file somewhere.
+> [!IMPORTANT]
+> We are installing and setting up the ESP-DF platform as Manual Way as we shown below. 
 ## Make sure you have these downloaded on your computer:
 - [ ] To check if you have downloaded Python 3.11, Open **PowerShell** on your PC.Run the command:
    ```
