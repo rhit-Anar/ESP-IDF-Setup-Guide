@@ -53,7 +53,7 @@ There are **two ways** to download the ESP-IDF platform, allowing you to build a
    + After downloading you should see path like this in your File Explorer. For an example: **C:\Espressif\frameworks\esp-idf-v5.4.3**
    + Make sure you have **export.ps1** file in your path such as: C:\Espressif\frameworks\esp-idf-v5.4.3 **look for => export.ps1**.
 > [!NOTE]
-> AT THIS POINT YOU HAVE  SUCCESSFULLY DOWNLOADED THE ESP-IDF TOOL. IN SECTION 5, IT SHOWS HOW TO CONNECT TO THE IDF tool from PowerShell.
+> AT THIS POINT YOU HAVE  SUCCESSFULLY DOWNLOADED THE ESP-IDF TOOL. IN SECTION 4, IT SHOWS HOW TO CONNECT TO THE IDF tool from PowerShell.
 ## 4. Bridging PowerShell to the ESP-IDF Toolset
 > [!IMPORTANT]
 >  ALWAYS DO THIS WHEN YOU OPEN A NEW TERMINAL! You must run the export script every time you open a new terminal, because it only creates a temporary bridge to the ESP-IDF tools; once the terminal closes, the environment variables are cleared, and the system no longer recognizes the idf.py command.
@@ -118,7 +118,7 @@ There are **two ways** to download the ESP-IDF platform, allowing you to build a
 
 ## TIPS FOR DEBUGGING ESP SET UP:
 - Python Virtual Environment
-- If you have a problem with running idf.py command or if your terminal can't recognize, go to section 4 and repeat the bridge conncetion steps.
+- If you have a problem with running idf.py command or if your terminal can't recognize, repeat section 4. [Go to Section 4](#4-bridging-powershell-to-the-esp-idf-toolset)
 - If you have chnaged your path or downloaded new things, please close the PowerShell window and open a new one again. 
 > [!NOTE]
 > At this point you have successfully done with setting up ES_IDF tool and learned how to set up the bridge bewteen the powershell and IDF tool. You also learned how to flash and compile as well. Documnets below shows how to set up other application of ESP set ups.
