@@ -1,48 +1,49 @@
 # ESP-IDF Setup Guide
 This documentation will help how to set ESP-IDF on you computer without requiring any pre knowledge of coding. An easy step-by-step steup.
+
 **Useful notation used for this document:**
 |Notation|Explanation|
 |--------|-----------|
-|(*)| Means recommended|
-|When you open a new terminal| You must run the export script every time you open a new terminal because it only creates a temporary bridge to the ESP-IDF tools; once the terminal is closed, the environment variables are cleared, and the system no longer recognizes the idf.py command.|
-## Small Note before everything: 
+|(*)| Means recommended, but it is optional|
+|When you open a new terminal| You must run the export script every time you open a new terminal because it only creates a temporary bridge to the ESP-IDF tools; once the terminal is closed, the environment variables are cleared, and the system no longer recognizes the idf.py command. [^1]|
+## 1. Small Note before everything: 
 There are **two ways** to download the ESP-IDF platform where you will be able to simply build and flash you code.
-   1. **Manual way**- Using PowerShell (Command Terminal) (*) 
+   - **Manual way**- Using PowerShell (Command Terminal) (*) 
       This is where you download the tools directly and manage them via Powershell. 
          - [x] Have the total control over what is happenning in every file.
          - [x] Can see every error message directly, so easy to debug and when you have envirement issue.
          - [x] Used with Git or other custom build script.
          - [ ] **BUT** you have manually run . .\export.ps1 in every new terminal to wake up the idf tools. 
       
-   3. **Authomatic way**- The VS Code Extention
+   - **Authomatic way**- The VS Code Extention
       This where you download the ESP-IDF as extention to VS code.
       - [x] Auto easy set up the menuconfig inside the editor.
       - [x] Uses simple buttons in VS code to flash and build scripts. (it handles export.ps1 automatically.)
       - [ ] **BUT** for debugging path errors like python and idf_tool_path error it is hard to fix beasue they are set in JSON file somewhere.
-> [!IMPORTANT]
+> [!WARNING]
 > This documnet only show how to install and set up the ESP-DF platform as **Manual Way** as we shown below.
-## 1. Things to download on your computer before download ESP-IDF
+## 2. Things to download on your computer before downloading ESP-IDF
    - [x] To check if you have downloaded Python 3.11, Open **PowerShell** on your PC. Run the command:
          ```
          python --version
          ```
    - [x] If not, Download Python 3.11. Link: [Download Python Click Here!](https://www.python.org/ftp/python/3.11.7/python-3.11.7-amd64.exe). (It is usually downloaded in Download folder.)
    - [x] In downloading process, make sure click on **Add Python to environment variables**.
-   - [x] If you forgot to add or not sure abut it's PATH, click on the the downloaded link again,
-      1. Select **Modify**
-      2. Click **Next** for Optional feature and on advanced option
-      3. click **Add Python to environment variables**.
-      4. Then click **Install**
+   - [x] If you forgot to add or not sure about it's PATH, click on the the downloaded link again,
+      - Select **Modify**
+      - Click **Next** for Optional feature and on advanced option
+      - click **Add Python to environment variables**.
+      - Then click **Install**
    - [x] Then close the power shell and open new powershell again to see the updated path/version and run the command again.
       ```
       python --version
       ```
    - [x] As a result You will see something like this.
-         <p align="left">
-            <img width="348" height="50" alt="image" src="https://github.com/user-attachments/assets/e8e3ff71-f0ac-4ffb-8fde-aeca5f4df4eb" />
-         </p>
+      <p align="left">
+         <img width="348" height="50" alt="image" src="https://github.com/user-attachments/assets/e8e3ff71-f0ac-4ffb-8fde-aeca5f4df4eb" />
+      </p>
    - [x] Install VS code: usually it is downloaded. 
-## 2. Downloading ESP_IDF Manually
+## 3. Downloading ESP_IDF Manually
    1. EDP-IDF Tools 5.4.3 version (This version supports these esp devices: **ESP32, ESP32-C2, ESP32-C3, ESP32-C6, ESP32-H series, ESP32-S series, ESP32-P Series**).
    2. When you download the the tool, make sure to enable the Chip targets you want to use during the download progress.
       <p align="left">
@@ -54,13 +55,13 @@ There are **two ways** to download the ESP-IDF platform where you will be able t
    5. After downloading you would see path. For an example: **C:\Espressif\frameworks\esp-idf-v5.4.3**
    6. Make sure you have **export.ps1** file in your path such as: C:\Espressif\frameworks\esp-idf-v5.4.3 **look for => export.ps1**.
 > [!NOTE]
-> AT THIS POINT YOU HAVE  SUCCESSFULLY DOWNLOADED THE ESP-IDF TOOL. IN SECTION 3, IT SHOWS HOW TO RUN YOUR CODE FROM POWER SHELL.
+> AT THIS POINT YOU HAVE  SUCCESSFULLY DOWNLOADED THE ESP-IDF TOOL. IN SECTION 4, IT SHOWS  HOW TO BUILD AND FLASH YOUR CODE FROM POWERSHELL.
         
-## 3. HOW TO BUILD AND FLASH YOUR CODE FROM POWERSHELL
+## 4. BRIDGE CONNECTING BETWEEEN POWERSHELL AND IDF TOOL. 
 > [!IMPORTANT]
-> ALWAYS DO THIS BEFORE USE IDF TOOL!!! **When you open a new terminal**.
+> ALWAYS DO THIS WHEN YOU OPEN A NEW TERMINAL!
    1. Open PowerShell on your computer.
-   3. **When you open a new terminal**
+   3. When you open a new terminal[^1].
       - Navigate to path below on your powershell to set up the connection to **IDF** tool. **If you have downloaded different version, please change the version number below**.
          ```
          cd C:\Espressif\frameworks\esp-idf-v5.4.3
@@ -119,7 +120,7 @@ There are **two ways** to download the ESP-IDF platform where you will be able t
 >[!TIP]
 >if you have a trouble with running the commands, go to part **When you open a new terminal**:
 
-## 3. ESP-IDF Terminal:
+## 4. ESP-IDF Terminal:
 1. After finished downloading the ESP-IDF terminal will be pop out.
 2. Then go to the project folder you want to run. 
 3. To delete the build folder:
