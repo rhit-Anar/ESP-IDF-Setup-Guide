@@ -7,8 +7,8 @@ This documentation will help how to set ESP-IDF on you computer without requirin
 |(*)| Means recommended, but it is optional|
 ## 1. Small Note before everything: 
 There are **two ways** to download the ESP-IDF platform where you will be able to simply build and flash you code.
-   - **Manual way**- Using PowerShell (Command Terminal) (*) 
-      This is where you download the tools directly and manage them via Powershell. 
+   - **Manual way**- Using PowerShell (Command Terminal) (*).\
+     This is where you download the tools directly and manage them via Powershell. 
       - [x] Have the total control over what is happenning in every file.
       - [x] Can see every error message directly, so easy to debug and when you have envirement issue.
       - [x] Used with Git or other custom build script.
@@ -116,44 +116,16 @@ There are **two ways** to download the ESP-IDF platform where you will be able t
       idf.py monitor 
       ```
    - To exit the terminal click --> **Ctrl[+]**
-## 4. ESP-IDF Terminal:
-1. After finished downloading the ESP-IDF terminal will be pop out.
-2. Then go to the project folder you want to run. 
-3. To delete the build folder:
-   ```
-   rmdir /s /q build
-   ```
-4. Deletes the old configuration
-   ```
-   del sdkconfig
-   ```
-6. set the target descired board. For this exampl, we use esp32p4.
-   ```
-   idf.py set-target esp32p4
-   ```
-7. Replace x for Port number. Go to **device Manager** -> **Port**
-   ```
-   idf.py -p COMx flash monitor
-   ```
->[!TIP]
->If you are having ny issue with sdkconfig file does not exists or incorrect version error run below commands
-   After running the command below, Click S for save and Q for quit. 
-   ```
-   idf.py menuconfig
-   ```
-   To manually configure the ver, open the config file in the NOTE, then **Ctrl+F**, search for **CONFIG_ESP_REV_MIN_FULL**. in our case we set 1 to 100. 
-   ```
-   notepad sdkconfig
-   ```
 
 ## TIPS FOR DEBUGGING ESP SET UP:
--Python Virtual Environment
--If you have a problem with running idf.py command or if your terminal can't recognize, go to section 4 and repeat the bridge conncetion steps.
--If you have chnaged your path or downloaded new things, please close the PowerShell window and open a new one again. 
-
+- Python Virtual Environment
+- If you have a problem with running idf.py command or if your terminal can't recognize, go to section 4 and repeat the bridge conncetion steps.
+- If you have chnaged your path or downloaded new things, please close the PowerShell window and open a new one again. 
+> [!NOTE]
+> At this point you have successfully done with setting up ES_IDF tool and learned how to set up the bridge bewteen the powershell and IDF tool. You also learned how to flash and compile as well. Documnets below shows how to set up other application of ESP set ups.
 # ESP-IDF Bluetooth Setup Instruction For Start Up
-Assumed: you have an working file of codes that u want to run on your machine. :)
-## What to chnage in your given code:
+Assumed: You have an working file of codes that u want to run on your machine.
+## What to change in your given code:
 In your code: Look for idf_Something.yml file in your main folder. (usually same folder as the main.c).
 Then you will see it is starts with dependencies: ....
 Look for a line: 
