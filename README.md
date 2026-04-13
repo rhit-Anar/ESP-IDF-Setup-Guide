@@ -10,10 +10,10 @@ This documentation will help how to set ESP-IDF on you computer without requirin
 There are **two ways** to download the ESP-IDF platform where you will be able to simply build and flash you code.
    - **Manual way**- Using PowerShell (Command Terminal) (*) 
       This is where you download the tools directly and manage them via Powershell. 
-         - [x] Have the total control over what is happenning in every file.
-         - [x] Can see every error message directly, so easy to debug and when you have envirement issue.
-         - [x] Used with Git or other custom build script.
-         - [ ] **BUT** you have manually run . .\export.ps1 in every new terminal to wake up the idf tools. 
+      - [x] Have the total control over what is happenning in every file.
+      - [x] Can see every error message directly, so easy to debug and when you have envirement issue.
+      - [x] Used with Git or other custom build script.
+      - [ ] **BUT** you have manually run . .\export.ps1 in every new terminal to wake up the idf tools. 
       
    - **Authomatic way**- The VS Code Extention
       This where you download the ESP-IDF as extention to VS code.
