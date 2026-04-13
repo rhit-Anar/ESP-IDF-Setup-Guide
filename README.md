@@ -5,7 +5,6 @@ This documentation will help how to set ESP-IDF on you computer without requirin
 |Notation|Explanation|
 |--------|-----------|
 |(*)| Means recommended, but it is optional|
-|When you open a new terminal| You must run the export script every time you open a new terminal because it only creates a temporary bridge to the ESP-IDF tools; once the terminal is closed, the environment variables are cleared, and the system no longer recognizes the idf.py command.|
 ## 1. Small Note before everything: 
 There are **two ways** to download the ESP-IDF platform where you will be able to simply build and flash you code.
    - **Manual way**- Using PowerShell (Command Terminal) (*) 
