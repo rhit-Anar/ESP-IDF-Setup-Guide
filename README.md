@@ -5,7 +5,7 @@ This documentation will help how to set ESP-IDF on you computer without requirin
 |Notation|Explanation|
 |--------|-----------|
 |(*)| Means recommended, but it is optional|
-|When you open a new terminal| You must run the export script every time you open a new terminal because it only creates a temporary bridge to the ESP-IDF tools; once the terminal is closed, the environment variables are cleared, and the system no longer recognizes the idf.py command.[^2].|
+|When you open a new terminal| You must run the export script every time you open a new terminal because it only creates a temporary bridge to the ESP-IDF tools; once the terminal is closed, the environment variables are cleared, and the system no longer recognizes the idf.py command.|
 ## 1. Small Note before everything: 
 There are **two ways** to download the ESP-IDF platform where you will be able to simply build and flash you code.
    - **Manual way**- Using PowerShell (Command Terminal) (*) 
@@ -44,71 +44,71 @@ There are **two ways** to download the ESP-IDF platform where you will be able t
       </p>
    - [x] Install VS code: usually it is downloaded. 
 ## 3. Downloading ESP_IDF Manually
-   1. EDP-IDF Tools 5.4.3 version (This version supports these esp devices: **ESP32, ESP32-C2, ESP32-C3, ESP32-C6, ESP32-H series, ESP32-S series, ESP32-P Series**).
-   2. When you download the the tool, make sure to enable the Chip targets you want to use during the download progress.
-      <p align="left">
-      <img width="336" height="216" alt="image" src="https://github.com/user-attachments/assets/8a90d9bb-e362-4648-a473-545ee78d0138" />
-      </p>
-   3. Download ESP-IDF 5.4.3 make sure to click the correct version. (**Please make sure the version supports you board. Defend on which board you are using, you may want to download other version.**)
+   + EDP-IDF Tools 5.4.3 version (This version supports these esp devices: **ESP32, ESP32-C2, ESP32-C3, ESP32-C6, ESP32-H series, ESP32-S series, ESP32-P Series**).
+   + When you download the the tool, make sure to enable the Chip targets you want to use during the download progress.
+         <p align="left">
+         <img width="336" height="216" alt="image" src="https://github.com/user-attachments/assets/8a90d9bb-e362-4648-a473-545ee78d0138" />
+         </p>
+   + Download ESP-IDF 5.4.3 make sure to click the correct version. (**Please make sure the version supports you board. Defend on which board you are using, you may want to download other version.**)
       To download ESP-IDF tool Click on the link: https://dl.espressif.com/dl/esp-idf/?idf=4.4
-   4. Make sure to download the folder you desire. For this case, I downloaded it in C drive.
-   5. After downloading you would see path. For an example: **C:\Espressif\frameworks\esp-idf-v5.4.3**
-   6. Make sure you have **export.ps1** file in your path such as: C:\Espressif\frameworks\esp-idf-v5.4.3 **look for => export.ps1**.
+   + Make sure to download the folder you desire. For this case, I downloaded it in C drive.
+   + After downloading you would see path. For an example: **C:\Espressif\frameworks\esp-idf-v5.4.3**
+   + Make sure you have **export.ps1** file in your path such as: C:\Espressif\frameworks\esp-idf-v5.4.3 **look for => export.ps1**.
 > [!NOTE]
-> AT THIS POINT YOU HAVE  SUCCESSFULLY DOWNLOADED THE ESP-IDF TOOL. IN SECTION 4, IT SHOWS  HOW TO BUILD AND FLASH YOUR CODE FROM POWERSHELL.
+> AT THIS POINT YOU HAVE  SUCCESSFULLY DOWNLOADED THE ESP-IDF TOOL. IN SECTION 5, IT SHOWS  HOW TO CONNECT TO IDF TOOL FROM POWERSHELL.
         
 ## 4. BRIDGE CONNECTING BETWEEEN POWERSHELL AND IDF TOOL. 
 > [!IMPORTANT]
-> [^2]: ALWAYS DO THIS WHEN YOU OPEN A NEW TERMINAL!.
+> ALWAYS DO THIS WHEN YOU OPEN A NEW TERMINAL! You must run the export script every time you open a new terminal because it only creates a temporary bridge to the ESP-IDF tools; once the terminal is closed, the environment variables are cleared, and the system no longer recognizes the idf.py command.
    1. Open PowerShell on your computer.
-   3. When you open a new terminal[^1].
+   2. When you open a new terminal.
       - Navigate to path below on your powershell to set up the connection to **IDF** tool. **If you have downloaded different version, please change the version number below**.
          ```
          cd C:\Espressif\frameworks\esp-idf-v5.4.3
          ```
-      - (**When you open a new terminal**) We want to wake up the esp-idf tool, but the windows security blocks them. So, to allow temporarily access to terminal, please run the code below. 
+      - We want to wake up the esp-idf tool, but the windows security blocks them. So, to allow temporarily access to terminal, please run the code below. 
          ```
          Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
          ```
-      - (**When you open a new terminal**) After allowing temporary access to the terminal, we want to wake up the IDF tool, run the command below.
+      - After allowing temporary access to the terminal, we want to wake up the IDF tool, run the command below.
          ```
          & .\export.ps1
          ```
-   7. To make sure you have the correct version ( for my case: v5.4.3) run: if it says 1.0... something it is okay.
-   ```
-   idf.py --version
-   ```
+   3. To make sure you have the correct version ( for my case: v5.4.3) run: if it says 1.0... something it is okay.
+      ```
+      idf.py --version
+      ```
 <p align="left">
 <img width="327" height="49" alt="image" src="https://github.com/user-attachments/assets/fa19a9d1-3199-4ff6-bb10-5936480e5020" />
 </p>
 
 > [!TIP]
-> [^1]: If you have trouble running the idf.py command, make sure you have connceted to the ESP-IDF to your terminal.
+> If you have trouble running the idf.py command, repeat section 4.
 > [!NOTE]
 > AT THIS POINT YOU HAVE CONNECETED TO IDF TOOL AND READY TO COMPILE and RUN YOUR CODE. NEXT NAVIGATE TO YOUR MAIN CODE SOURCE FILE.
-
-   8. Then go to your project if you have one. If not, you can run example codes from ESP-IDF folder. Search the PATH below in your file Explorer, the choose you example code. Open in you VS. 
+## 4. HOW TO BUILD AND FLASH YOUR CODE FROM POWERSHELL
+   - Then go to your project if you have one. If not, you can run example codes from ESP-IDF folder. Search the PATH below in your file Explorer, the choose you example code. Open in you VS. 
       if you have downloaded in C drive:
        ```
       C:\Espressif\frameworks\esp-idf-v5.5.1-2\examples\get-started
        ```
-   9. Make sure target set to your target device (my target is esp32p4). If not, run:
+   - Make sure target set to your target device (my target is esp32p4). If not, run:
        ```
        idf.py set-target esp32p4
        ```
-   11. (*) If you have build the project before, clean before flash (it will remove old build folder), run:
+   - (*) If you have build the project before, clean before flash (it will remove old build folder), run:
        ```
        idf.py fullclean
        ```
-   14. Then build:
+   - Then build:
        ```
        idf.py build
        ```
-   16. Then to flash it to your device and open the terminal, run the command below. (Instead of x put the COM number).
+   - Then to flash it to your device and open the terminal, run the command below. (Instead of x put the COM number).
        ```
        idf.py -p COMx flash monitor
        ```
-   17. To run seperate falsh and monitor command here they are:
+   - To run seperate falsh and monitor command here they are:
       ```
       idf.py -p COMx flash
       ```
