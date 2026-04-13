@@ -150,18 +150,18 @@ Look for a line:
 
 ## How to run your code
 - Please go to your main code file folder in power shell.
-```
-cd C:\Users\...
-```
-To build:
-```
-idf.py build
-```
-To flash and show the monitor:
-```
-idf.py -p COMx flash monitor
-```
-Now you should see in the terminal what should be printed in your code. 
+   ```
+   cd C:\Users\...
+   ```
+- To build:
+   ```
+   idf.py build
+   ```
+- To flash and show the monitor:
+   ```
+   idf.py -p COMx flash monitor
+   ```
+- Now you should see in the terminal what should be printed in your code. 
 >[!TIP]
 >If u see any Nimble related error, make sure your path is correct because I had the same error, and it was indeed the wrong path for me. Eventhough it it says you should configure the bluetooth manually, I reccommend just please the path!
 >Because if numble pathis wrong it down't know how to find the nimble.h file located, it will think it doesn't exits. 
