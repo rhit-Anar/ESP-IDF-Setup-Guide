@@ -1,4 +1,5 @@
 # ESP-IDF Setup Guide - Lets Get Started
+This document explains how to download ESP-IDF version 5.4.3, which works perfectly with the following ESP32 devices. Please use ESP-IDF Tools Installer (Windows).
 This documentation will help you set up ESP-IDF on your computer without prior coding knowledge—an easy step-by-step setup.
 **Useful notation used for this document:**
 |Notation|Explanation|
@@ -42,16 +43,34 @@ There are **two ways** to download the ESP-IDF platform, allowing you to build a
       </p>
    - [x] Install VS code: usually it is downloaded. 
 ## 3. Downloading ESP_IDF Manually
-   + EDP-IDF Tools 5.4.3 version (This version supports these esp devices: **ESP32, ESP32-C2, ESP32-C3, ESP32-C6, ESP32-H series, ESP32-S series, ESP32-P Series**).
-   + When you download the tool, make sure to enable the Chip targets you want to use during the download process.
-         <p align="left">
-         <img width="336" height="216" alt="image" src="https://github.com/user-attachments/assets/8a90d9bb-e362-4648-a473-545ee78d0138" />
-         </p>
+   + EDP-IDF Tools 5.4.3 version.
    + Download ESP-IDF 5.4.3 make sure to click the correct version. (**Please make sure the version supports you board. Defend on which board you are using, you may want to download other version.**)
       To download ESP-IDF tool Click on the link: https://dl.espressif.com/dl/esp-idf/?idf=4.4
-   + Make sure to download the folder you desire. For this case, I downloaded it to the C drive.
-   + After downloading you should see path like this in your File Explorer. For an example: **C:\Espressif\frameworks\esp-idf-v5.4.3**
+   + Then follow as shown in the image below.
+      <p align="left">
+         <img width="596" height="457" alt="image" src="https://github.com/user-attachments/assets/99915b3d-e535-4b4f-835f-d680a44e8bf3" />
+      </p>
+      <p align="left">
+         <img width="596" height="455" alt="image" src="https://github.com/user-attachments/assets/99958b7a-a38b-4ee3-b4d8-da48aebc1794" />
+      </p>
+      <p align="left">
+         <img width="595" height="460" alt="image" src="https://github.com/user-attachments/assets/3f28d923-fbfb-4be4-be5c-c18d8b94a30b" />
+      </p>
+      When you download the tool, make sure to enable the Chip targets you want to use during the download process.
+       <p align="left">
+         <img width="592" height="457" alt="image" src="https://github.com/user-attachments/assets/b8f5b245-81bf-4974-953d-70de6bebbc51" />
+      </p>
+      <p align="left">
+         <img width="592" height="456" alt="image" src="https://github.com/user-attachments/assets/aec47b51-ab2d-4179-adb0-040d10c97580" />
+      </p>
+      <p align="left">
+         <img width="590" height="455" alt="image" src="https://github.com/user-attachments/assets/d17dc016-52ac-4f26-a684-827c93623e40" />
+      </p>
    + Make sure you have **export.ps1** file in your path such as: C:\Espressif\frameworks\esp-idf-v5.4.3 **look for => export.ps1**.
+   + After done downloading, two erminal will pop up, IDF terminal and PowerShell terminal. We are using Powershell.
+   <p align="left">
+     <img width="1115" height="577" alt="image" src="https://github.com/user-attachments/assets/55067710-8a11-47df-8ad2-2387ea307a76" />
+   </p>
 > [!NOTE]
 > AT THIS POINT YOU HAVE  SUCCESSFULLY DOWNLOADED THE ESP-IDF TOOL. IN SECTION 4, IT SHOWS HOW TO CONNECT TO THE IDF tool from PowerShell.
 ## 4. Bridging PowerShell to the ESP-IDF Toolset
