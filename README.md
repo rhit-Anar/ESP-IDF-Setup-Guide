@@ -5,7 +5,7 @@ This documentation will help how to set ESP-IDF on you computer without requirin
 |Notation|Explanation|
 |--------|-----------|
 |(*)| Means recommended, but it is optional|
-|When you open a new terminal| You must run the export script every time you open a new terminal because it only creates a temporary bridge to the ESP-IDF tools; once the terminal is closed, the environment variables are cleared, and the system no longer recognizes the idf.py command. [^1]|
+|When you open a new terminal| You must run the export script every time you open a new terminal because it only creates a temporary bridge to the ESP-IDF tools; once the terminal is closed, the environment variables are cleared, and the system no longer recognizes the idf.py command.|
 ## 1. Small Note before everything: 
 There are **two ways** to download the ESP-IDF platform where you will be able to simply build and flash you code.
    - **Manual way**- Using PowerShell (Command Terminal) (*) 
@@ -62,6 +62,8 @@ There are **two ways** to download the ESP-IDF platform where you will be able t
 > ALWAYS DO THIS WHEN YOU OPEN A NEW TERMINAL!
    1. Open PowerShell on your computer.
    3. When you open a new terminal[^1].
+   4. This is a second line.
+
       - Navigate to path below on your powershell to set up the connection to **IDF** tool. **If you have downloaded different version, please change the version number below**.
          ```
          cd C:\Espressif\frameworks\esp-idf-v5.4.3
@@ -83,7 +85,7 @@ There are **two ways** to download the ESP-IDF platform where you will be able t
 </p>
 
 > [!TIP]
-> If you have trouble running the idf.py command, make sure you have connceted to the ESP-IDF to your terminal. Run the export command line look for **When you open a new terminal** .
+> [^1]: If you have trouble running the idf.py command, make sure you have connceted to the ESP-IDF to your terminal.
 > [!NOTE]
 > AT THIS POINT YOU HAVE CONNECETED TO IDF TOOL AND READY TO COMPILE and RUN YOUR CODE. NEXT NAVIGATE TO YOUR MAIN CODE SOURCE FILE.
 
