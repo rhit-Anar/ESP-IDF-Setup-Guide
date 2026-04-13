@@ -71,6 +71,7 @@ There are **two ways** to download the ESP-IDF platform, allowing you to build a
    <p align="left">
      <img width="1115" height="577" alt="image" src="https://github.com/user-attachments/assets/55067710-8a11-47df-8ad2-2387ea307a76" />
    </p>
+   
 > [!NOTE]
 > AT THIS POINT YOU HAVE  SUCCESSFULLY DOWNLOADED THE ESP-IDF TOOL. IN SECTION 4, IT SHOWS HOW TO CONNECT TO THE IDF tool from PowerShell.
 ## 4. Bridging PowerShell to the ESP-IDF Toolset
