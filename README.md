@@ -54,7 +54,7 @@ There are **two ways** to download the ESP-IDF platform, allowing you to build a
    + Make sure you have **export.ps1** file in your path such as: C:\Espressif\frameworks\esp-idf-v5.4.3 **look for => export.ps1**.
 > [!NOTE]
 > AT THIS POINT YOU HAVE  SUCCESSFULLY DOWNLOADED THE ESP-IDF TOOL. IN SECTION 5, IT SHOWS HOW TO CONNECT TO THE IDF tool from PowerShell.
-        
+## Sample Section      
 ## 4. BRIDGE CONNECTING BETWEEEN POWERSHELL AND IDF TOOL
 > [!IMPORTANT]
 >  ALWAYS DO THIS WHEN YOU OPEN A NEW TERMINAL! You must run the export script every time you open a new terminal, because it only creates a temporary bridge to the ESP-IDF tools; once the terminal closes, the environment variables are cleared, and the system no longer recognizes the idf.py command.
@@ -147,6 +147,8 @@ Look for a line:
       ```
 ## What to Run in Power Shell Teminal:
    - Repeat Section 4 in ESP-IDF Set up: Link to the section 4 [Link Text](#bridge-connecting-betweem-powershell-and-idf-tool).
+   - ink to the sample section: [Link Text](#sample-section).
+
 ## How to run your code
 - Please go to your main code file folder in power shell.
 ```
