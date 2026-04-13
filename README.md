@@ -5,7 +5,7 @@ This documentation will help how to set ESP-IDF on you computer without requirin
 |Notation|Explanation|
 |--------|-----------|
 |(*)| Means recommended, but it is optional|
-|When you open a new terminal| You must run the export script every time you open a new terminal because it only creates a temporary bridge to the ESP-IDF tools; once the terminal is closed, the environment variables are cleared, and the system no longer recognizes the idf.py command.|
+|When you open a new terminal| You must run the export script every time you open a new terminal because it only creates a temporary bridge to the ESP-IDF tools; once the terminal is closed, the environment variables are cleared, and the system no longer recognizes the idf.py command.[^2].|
 ## 1. Small Note before everything: 
 There are **two ways** to download the ESP-IDF platform where you will be able to simply build and flash you code.
    - **Manual way**- Using PowerShell (Command Terminal) (*) 
@@ -59,11 +59,9 @@ There are **two ways** to download the ESP-IDF platform where you will be able t
         
 ## 4. BRIDGE CONNECTING BETWEEEN POWERSHELL AND IDF TOOL. 
 > [!IMPORTANT]
-> ALWAYS DO THIS WHEN YOU OPEN A NEW TERMINAL!
+> [^2]: ALWAYS DO THIS WHEN YOU OPEN A NEW TERMINAL!.
    1. Open PowerShell on your computer.
    3. When you open a new terminal[^1].
-   4. This is a second line.
-
       - Navigate to path below on your powershell to set up the connection to **IDF** tool. **If you have downloaded different version, please change the version number below**.
          ```
          cd C:\Espressif\frameworks\esp-idf-v5.4.3
