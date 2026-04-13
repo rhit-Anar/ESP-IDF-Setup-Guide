@@ -1,4 +1,4 @@
-# ESP-IDF Setup Guide
+# ESP-IDF Setup Guide - Lets Get Started
 This documentation will help how to set ESP-IDF on you computer without requiring any pre knowledge of coding. An easy step-by-step steup.
 
 **Useful notation used for this document:**
@@ -116,10 +116,7 @@ There are **two ways** to download the ESP-IDF platform where you will be able t
       ```
       idf.py monitor 
       ```
-   18. To exit the terminal click --> **Ctrl[+]**
->[!TIP]
->if you have a trouble with running the commands, go to part **When you open a new terminal**:
-
+   - To exit the terminal click --> **Ctrl[+]**
 ## 4. ESP-IDF Terminal:
 1. After finished downloading the ESP-IDF terminal will be pop out.
 2. Then go to the project folder you want to run. 
@@ -150,11 +147,12 @@ There are **two ways** to download the ESP-IDF platform where you will be able t
    notepad sdkconfig
    ```
 
-## Other issues:
-Python Virtual Environment: python.exe make sue in esp-idf.
-$env:IDF_PATH  --> to check if idf path is correct directiny pinting to
+## TIPS FOR DEBUGGING ESP SET UP:
+-Python Virtual Environment
+-If you have a problem with running idf.py command or if your terminal can't recognize, go to section 4 and repeat the bridge conncetion steps.
+-If you have chnaged your path or downloaded new things, please close the PowerShell window and open a new one again. 
 
-# ESP-IDF Bluetooth setup instruction
+# ESP-IDF Bluetooth Setup Instruction For Start Up
 Assumed: you have an working file of codes that u want to run on your machine. :)
 ## What to chnage in your given code:
 In your code: Look for idf_Something.yml file in your main folder. (usually same folder as the main.c).
