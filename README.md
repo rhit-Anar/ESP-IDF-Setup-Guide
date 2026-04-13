@@ -1,26 +1,25 @@
 # ESP-IDF Setup Guide - Lets Get Started
-This documentation will help how to set ESP-IDF on you computer without requiring any pre knowledge of coding. An easy step-by-step steup.
-
+This documentation will help you set up ESP-IDF on your computer without prior coding knowledge—an easy step-by-step setup.
 **Useful notation used for this document:**
 |Notation|Explanation|
 |--------|-----------|
 |(*)| Means recommended, but it is optional|
 ## 1. Small Note before everything: 
-There are **two ways** to download the ESP-IDF platform where you will be able to simply build and flash you code.
+There are **two ways** to download the ESP-IDF platform, allowing you to build and flash your code.
    - **Manual way**- Using PowerShell (Command Terminal) (*).\
      This is where you download the tools directly and manage them via Powershell. 
-      - [x] Have the total control over what is happenning in every file.
-      - [x] Can see every error message directly, so easy to debug and when you have envirement issue.
-      - [x] Used with Git or other custom build script.
-      - [ ] **BUT** you have manually run . .\export.ps1 in every new terminal to wake up the idf tools. 
+      - [x] Have total control over what is happening in every file.
+      - [x] Can see every error message directly, so it's easy to debug and handle environment issues.
+      - [x] Used with Git or other custom build scripts.
+      - [ ] **BUT** you have manually run . .\export.ps1 in every new PowerShell terminal to wake up the idf tools. 
       
    - **Authomatic way**- The VS Code Extention
       This where you download the ESP-IDF as extention to VS code.
-      - [x] Auto easy set up the menuconfig inside the editor.
-      - [x] Uses simple buttons in VS code to flash and build scripts. (it handles export.ps1 automatically.)
-      - [ ] **BUT** for debugging path errors like python and idf_tool_path error it is hard to fix beasue they are set in JSON file somewhere.
+      - [x] Auto-easy sets up the menuconfig inside the editor.
+      - [x] Uses simple buttons in VS Code to flash and build scripts. (It handles export.ps1 automatically).
+      - [ ] **BUT** for debugging path errors like Python and IDF tool path errors, it is hard to fix because they are set in a JSON file somewhere.
 > [!WARNING]
-> This documnet only show how to install and set up the ESP-DF platform as **Manual Way** as we shown below.
+> This document only shows how to install and set up the ESP-DF platform using the **Manual Way** shown below.
 ## 2. Things to download on your computer before downloading ESP-IDF
    - [x] To check if you have downloaded Python 3.11, Open **PowerShell** on your PC. Run the command:
          ```
@@ -28,12 +27,12 @@ There are **two ways** to download the ESP-IDF platform where you will be able t
          ```
    - [x] If not, Download Python 3.11. Link: [Download Python Click Here!](https://www.python.org/ftp/python/3.11.7/python-3.11.7-amd64.exe). (It is usually downloaded in Download folder.)
    - [x] In downloading process, make sure click on **Add Python to environment variables**.
-   - [x] If you forgot to add or not sure about it's PATH, click on the the downloaded link again,
+   - [x] If you forgot to add or are not sure about its PATH, click on the downloaded link again,
       - Select **Modify**
-      - Click **Next** for Optional feature and on advanced option
+      - Click **Next** for Optional feature and on Advanced option
       - click **Add Python to environment variables**.
       - Then click **Install**
-   - [x] Then close the power shell and open new powershell again to see the updated path/version and run the command again.
+   - [x] Then close PowerShell and open a new PowerShell window to see the updated path/version, and run the command again.
       ```
       python --version
       ```
@@ -44,24 +43,24 @@ There are **two ways** to download the ESP-IDF platform where you will be able t
    - [x] Install VS code: usually it is downloaded. 
 ## 3. Downloading ESP_IDF Manually
    + EDP-IDF Tools 5.4.3 version (This version supports these esp devices: **ESP32, ESP32-C2, ESP32-C3, ESP32-C6, ESP32-H series, ESP32-S series, ESP32-P Series**).
-   + When you download the the tool, make sure to enable the Chip targets you want to use during the download progress.
+   + When you download the tool, make sure to enable the Chip targets you want to use during the download process.
          <p align="left">
          <img width="336" height="216" alt="image" src="https://github.com/user-attachments/assets/8a90d9bb-e362-4648-a473-545ee78d0138" />
          </p>
    + Download ESP-IDF 5.4.3 make sure to click the correct version. (**Please make sure the version supports you board. Defend on which board you are using, you may want to download other version.**)
       To download ESP-IDF tool Click on the link: https://dl.espressif.com/dl/esp-idf/?idf=4.4
-   + Make sure to download the folder you desire. For this case, I downloaded it in C drive.
-   + After downloading you would see path. For an example: **C:\Espressif\frameworks\esp-idf-v5.4.3**
+   + Make sure to download the folder you desire. For this case, I downloaded it to the C drive.
+   + After downloading you should see path like this in your File Explorer. For an example: **C:\Espressif\frameworks\esp-idf-v5.4.3**
    + Make sure you have **export.ps1** file in your path such as: C:\Espressif\frameworks\esp-idf-v5.4.3 **look for => export.ps1**.
 > [!NOTE]
-> AT THIS POINT YOU HAVE  SUCCESSFULLY DOWNLOADED THE ESP-IDF TOOL. IN SECTION 5, IT SHOWS  HOW TO CONNECT TO IDF TOOL FROM POWERSHELL.
+> AT THIS POINT YOU HAVE  SUCCESSFULLY DOWNLOADED THE ESP-IDF TOOL. IN SECTION 5, IT SHOWS HOW TO CONNECT TO THE IDF tool from PowerShell.
         
 ## 4. BRIDGE CONNECTING BETWEEEN POWERSHELL AND IDF TOOL. 
 > [!IMPORTANT]
-> ALWAYS DO THIS WHEN YOU OPEN A NEW TERMINAL! You must run the export script every time you open a new terminal because it only creates a temporary bridge to the ESP-IDF tools; once the terminal is closed, the environment variables are cleared, and the system no longer recognizes the idf.py command.
+>  ALWAYS DO THIS WHEN YOU OPEN A NEW TERMINAL! You must run the export script every time you open a new terminal, because it only creates a temporary bridge to the ESP-IDF tools; once the terminal closes, the environment variables are cleared, and the system no longer recognizes the idf.py command.
    1. Open PowerShell on your computer.
    2. When you open a new terminal.
-      - Navigate to path below on your powershell to set up the connection to **IDF** tool. **If you have downloaded different version, please change the version number below**.
+      - Navigate to the path below on your PowerShell to set up the connection to the **IDF** tool. **If you have downloaded a different version, please change the version number below**.
          ```
          cd C:\Espressif\frameworks\esp-idf-v5.4.3
          ```
@@ -73,7 +72,7 @@ There are **two ways** to download the ESP-IDF platform where you will be able t
          ```
          & .\export.ps1
          ```
-   3. To make sure you have the correct version ( for my case: v5.4.3) run: if it says 1.0... something it is okay.
+   3. To make sure you have the correct version ( for my case: v5.4.3)
       ```
       idf.py --version
       ```
@@ -83,10 +82,11 @@ There are **two ways** to download the ESP-IDF platform where you will be able t
 
 > [!TIP]
 > If you have trouble running the idf.py command, repeat section 4.
+
 > [!NOTE]
-> AT THIS POINT YOU HAVE CONNECETED TO IDF TOOL AND READY TO COMPILE and RUN YOUR CODE. NEXT NAVIGATE TO YOUR MAIN CODE SOURCE FILE.
+>AT THIS POINT, YOU HAVE CONNECTED TO IDF TOOL AND ARE READY TO COMPILE AND RUN YOUR CODE. Next, navigate to your main code source file.
 ## 4. HOW TO BUILD AND FLASH YOUR CODE FROM POWERSHELL
-   - Then go to your project if you have one. If not, you can run example codes from ESP-IDF folder. Search the PATH below in your file Explorer, the choose you example code. Open in you VS. 
+   - Go to your project if you have one. If not, you can run example codes from ESP-IDF folder. Search the PATH below in your file Explorer, the choose you example code. Open in you VS.\
       if you have downloaded in C drive:
        ```
       C:\Espressif\frameworks\esp-idf-v5.5.1-2\examples\get-started
@@ -103,11 +103,11 @@ There are **two ways** to download the ESP-IDF platform where you will be able t
        ```
        idf.py build
        ```
-   - Then to flash it to your device and open the terminal, run the command below. (Instead of x put the COM number).
+   - Then to flash it to your device and display a monitor, run the command below. (Instead of x put the COM number).
        ```
        idf.py -p COMx flash monitor
        ```
-   - To run seperate falsh and monitor command here they are:
+   - To run seperate flash and monitor command here they are:
       ```
       idf.py -p COMx flash
       ```
@@ -124,64 +124,34 @@ There are **two ways** to download the ESP-IDF platform where you will be able t
 > [!NOTE]
 > At this point you have successfully done with setting up ES_IDF tool and learned how to set up the bridge bewteen the powershell and IDF tool. You also learned how to flash and compile as well. Documnets below shows how to set up other application of ESP set ups.
 # ESP-IDF Bluetooth Setup Instruction For Start Up
-Assumed: You have an working file of codes that u want to run on your machine.
+Assumed: You have an working file of codes that u want to run on your machine. 
 ## What to change in your given code:
-In your code: Look for idf_Something.yml file in your main folder. (usually same folder as the main.c).
-Then you will see it is starts with dependencies: ....
+In your code: Look for idf_Something.yml file in your main folder. (usually same folder as the main.c).\
+Then you will see it is starts with **dependencies**:\
 Look for a line: 
    ```
    nimble_peripheral_utils:
    path: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
    ```
-Then go to your Folder and look for where is your nimble_peripheral_utils file is located in your folder. And copy that. But here
-I have copied the path below with different veersion of ESP_IDFs and you cn just copy and paste.
-**Remember to chnage the C:\ if you didn't downloaded in your C drive. Easy way is just directly copy the path from your folder**.
+- Then go to your Espressif folder and look for where is your nimble_peripheral_utils file is located in your folder.
+- And copy that path. But here I have copied the path below with a different version of ESP_IDFs; you can copy and paste it.\
+   **Remember to change the C:\ if you didn't downloaded in your C drive**.
 
-Version of ESP_IDF: **esp-idf-v5.5.1-2**.
-```
-C:\Espressif\frameworks\esp-idf-v5.5.1-2\examples\bluetooth\nimble\common\nimble_peripheral_utils
-```
-Version of ESP_IDF: **esp-idf-v5.4.3**.
-```
-C:\Espressif\frameworks\esp-idf-v5.4.3\examples\bluetooth\nimble\common\nimble_peripheral_utils
-```
-## What to Run in Power Shell Teminal: (Assumed ESP_IDF is in C drive!!!, change if your location is different.)
-Please go to your esp_IDF folder:
-```
-cd  C:\Espressif\frameworks
-```
-Since we may have different version run the next code to go to your versuion of IDF:
-```
-ls
-```
-Once you have done, You may see different versions, (I recommend have only one version, or else something it confuses the path.)
-<p align="left">
-<img width="678" height="216" alt="image" src="https://github.com/user-attachments/assets/74f1fd6d-c27c-4882-8044-ecf638eeb5a8" />
-</p>
-Then go to that folder, change the version number below with what you have. Easy trick, if you type **e** then click **Tab** it completes auto for you. 
-
-```
-cd esp-idf-v5.5.1-2
-```
-After you are in the correct esp_idf folder run below command in Power Shell Teminal. (I recommend us it from the search app not from VS code.)
-
-Run code below, because the terminal is being over protective and this below line give you one time access to run the code. 
-```
-Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
-```
-Then run the code below. Sometimes the the version is different like, ..\export... or something . If that is is the case google. 
-```
-.\export.ps1
-```
-Then now go back to your Main code file folder.
-
+   - Version of ESP_IDF: **esp-idf-v5.5.1-2**.
+      ```
+      C:\Espressif\frameworks\esp-idf-v5.5.1-2\examples\bluetooth\nimble\common\nimble_peripheral_utils
+      ```
+    - Version of ESP_IDF: **esp-idf-v5.4.3**.
+      ```
+      C:\Espressif\frameworks\esp-idf-v5.4.3\examples\bluetooth\nimble\common\nimble_peripheral_utils
+      ```
+## What to Run in Power Shell Teminal:
+   - Repeat Section 4 in ESP-IDF Set up: Link to the section 4 [Link Text](#BRIDGE-CONNECTING-BETWEEEN-POWERSHELL-AND-IDF-TOOL. ).
 ## How to run your code
-Please go to your main code file folder in power shell.Replace the the whole C:\Users\X with your path to the code. 
-
+- Please go to your main code file folder in power shell.
 ```
-cd C:\Users\X
+cd C:\Users\...
 ```
-
 To build:
 ```
 idf.py build
