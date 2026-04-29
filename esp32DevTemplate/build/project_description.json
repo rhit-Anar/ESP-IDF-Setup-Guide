@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32_dev_template",
-    "project_version":    "ce40700",
+    "project_version":    "d4a0854-dirty",
     "project_path":       "C:/espIdfStandardSetup/ESP-IDF-Setup-Guide/esp32DevTemplate",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.4.3",
     "build_dir":          "C:/espIdfStandardSetup/ESP-IDF-Setup-Guide/esp32DevTemplate/build",
@@ -1190,13 +1190,13 @@
             "dir": "C:/espIdfStandardSetup/ESP-IDF-Setup-Guide/esp32DevTemplate/main",
             "type": "LIBRARY",
             "lib": "__idf_main",
-            "reqs": [],
+            "reqs": [ "nvs_flash", "esp_wifi", "esp_event", "esp_netif" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "C:/espIdfStandardSetup/ESP-IDF-Setup-Guide/esp32DevTemplate/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/espIdfStandardSetup/ESP-IDF-Setup-Guide/esp32DevTemplate/main/main.c", "C:/espIdfStandardSetup/ESP-IDF-Setup-Guide/esp32DevTemplate/main/hello_world/hello_world.c", "C:/espIdfStandardSetup/ESP-IDF-Setup-Guide/esp32DevTemplate/main/bluetooth/nimBLE_GATT_Server/src/nimBLE_gatt_server_setup.c", "C:/espIdfStandardSetup/ESP-IDF-Setup-Guide/esp32DevTemplate/main/bluetooth/nimBLE_GATT_Server/src/gap.c", "C:/espIdfStandardSetup/ESP-IDF-Setup-Guide/esp32DevTemplate/main/bluetooth/nimBLE_GATT_Server/src/gatt_svc.c", "C:/espIdfStandardSetup/ESP-IDF-Setup-Guide/esp32DevTemplate/main/bluetooth/nimBLE_GATT_Server/src/heart_rate_mock.c", "C:/espIdfStandardSetup/ESP-IDF-Setup-Guide/esp32DevTemplate/main/bluetooth/nimBLE_GATT_Server/src/led.c" ],
-            "include_dirs": [ ".", "hello_world", "bluetooth/nimBLE_GATT_Server/include" ]
+            "sources": [ "C:/espIdfStandardSetup/ESP-IDF-Setup-Guide/esp32DevTemplate/main/main.c", "C:/espIdfStandardSetup/ESP-IDF-Setup-Guide/esp32DevTemplate/main/wifi/station/src/station_example_main.c" ],
+            "include_dirs": [ ".", "wifi/station/include" ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -2856,11 +2856,11 @@
             "prefix": "idf",
             "dir": "C:/espIdfStandardSetup/ESP-IDF-Setup-Guide/esp32DevTemplate/main",
             "lib": "__idf_main",
-            "reqs": [],
+            "reqs": [ "nvs_flash", "esp_wifi", "esp_event", "esp_netif" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ ".", "hello_world", "bluetooth/nimBLE_GATT_Server/include" ]
+            "include_dirs": [ ".", "wifi/station/include" ]
         }
     },
     "debug_prefix_map_gdbinit": "",

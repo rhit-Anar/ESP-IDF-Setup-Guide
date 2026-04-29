@@ -9,6 +9,7 @@
 #if USE_BLE
 #include "nimBLE_gatt_server_setup.h"
 #endif
+void station_wifi_main(void);
 void ble_gatt_main(void);
 void app_main(void)
 {
@@ -25,5 +26,9 @@ void app_main(void)
     printf("Calling the ble gatt server!");
 #endif
 //=============================================================================================================
-
+//Wifi station set up -----------------------------------------------------------------------------------------
+#if USE_WIFI
+    station_wifi_main();
+#endif
+//=============================================================================================================
 }
