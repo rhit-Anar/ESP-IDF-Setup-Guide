@@ -1,0 +1,2 @@
+source C:/espIdfStandardSetup/ESP-IDF-Setup-Guide/esp32DevTemplate/build/gdbinit/symbols
+source C:/espIdfStandardSetup/ESP-IDF-Setup-Guide/esp32DevTemplate/build/gdbinit/connect
